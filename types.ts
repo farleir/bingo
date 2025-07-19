@@ -12,9 +12,9 @@ export interface BingoCardData {
 }
 
 export enum Speed {
-  Lento = 8000,
-  Normal = 4000,
-  Rápido = 2000,
+  Slow = 3000,
+  Normal = 2000,
+  Fast = 1000,
 }
 
 export interface GameContextType {
