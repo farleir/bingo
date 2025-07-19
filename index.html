@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-TF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bingo Cantado - Sorteador de Bingo com IA e Frases Brasileiras</title>
+    <meta name="description" content="O Bingo Cantado é o seu sorteador de bingo online com locutor de voz! Gere números e ouça frases engraçadas da cultura brasileira. Perfeito para festas, reuniões de família e eventos. Jogue bingo em casa com a emoção de um locutor de verdade." />
+    <meta name="keywords" content="bingo cantado, sorteador de bingo, bingo online, bingo com voz, locutor de bingo, bingo com ia, gerador de bingo, frases de bingo engraçadas, bingo para festas, bingo brasileiro, bingo em casa" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #fdf8e1; /* A light, sandy tropical background */
+        font-family: 'Inter', sans-serif;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+      
+      /* Animação para o número sorteado aparecer com destaque */
+      @keyframes jump-in {
+        0% { transform: scale(0.5) translateY(-50px); opacity: 0; }
+        70% { transform: scale(1.1) translateY(10px); }
+        100% { transform: scale(1) translateY(0); opacity: 1; }
+      }
+      .animate-jump-in {
+        animation: jump-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+
+      /* Classes de grid customizadas para o painel de números */
+      .grid-cols-15 {
+        grid-template-columns: repeat(15, minmax(0, 1fr));
+      }
+      /* Otimização para 75 bolas, garantindo 5 colunas para BINGO */
+      @media (min-width: 768px) {
+        .grid-cols-15-75 {
+            grid-template-columns: repeat(15, minmax(0, 1fr));
+        }
+      }
+      .grid-cols-15-75 {
+          grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
